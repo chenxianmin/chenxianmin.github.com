@@ -1,0 +1,17 @@
+---
+layout: default
+title: "all posts"
+---
+<div id="home">
+  <div id="current" class="post">
+    <div id="post" class="post">
+      <h1><a>all posts</a></h1>
+      <div class='strap'>last updated {{ site.posts.first.date | date_to_string }}</div>
+      <ul>
+        {% for post in site.posts %}
+          {% include post_list_entry.html %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
