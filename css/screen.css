@@ -23,7 +23,7 @@ html, body {
 
 body {
   background: #335;
-  font: 10px "Lucida Grande", Verdanda, helvetica, arial, clean, sans-serif;
+  font: 10px "Trebuchet MS", Verdanda, helvetica, arial, clean, sans-serif;
   *font-size: small;
   text-align: center;
   color: #eee;
@@ -55,10 +55,12 @@ p {
 
 a {
   color: #88a;
+  text-decoration: none;
 }
 
 a:hover {
   color: black;
+  text-decoration: underline;
 }
 
 a:visited {
@@ -74,9 +76,11 @@ table {
 blockquote {
   font-style: italic;
   margin-left: 30px;
-  color: #555;
   border: 1px dashed #555;
   padding: 0 15px;
+}
+div.highlight pre {
+    background-color: #415;
 }
 
 /* site */
