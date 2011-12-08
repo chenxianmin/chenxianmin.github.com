@@ -1,0 +1,51 @@
+---
+layout: post
+title: "使用vimwiki作为个人知识管理工具"
+categories:
+ - vim
+ - pkm
+---
+
+vim是一个强大而有趣的编辑器，比较遗憾的是它仅在程序员之间流行。我是从善用佳软[1]的这篇文章 "《普通人的编辑利器——vim》":http://blog.sina.com.cn/s/blog_46dac66f010005kw.html  开始接触vim的，之后就对它爱不释手了。我现在主要用它写博客，记笔记，这里不得不提及它的一个插件—— "vimwiki":http://code.google.com/p/vimwiki/
+
+bq.. Vimwiki is a personal wiki for Vim -- a number of linked text files that have their own syntax highlighting.
+
+With vimwiki you can
+
+organize notes and ideas
+manage todo-lists
+write documentation
+
+p. 它是一个个人知识管理工具，即pkm[2]。在使用vimwiki之前，我使用evernote这个强大的笔记软件，它支持笔记本分类管理，支持标签，支持网页剪辑等等。但接触到vimwiki之后，我发现了一个更强大的记录方式。我在此谈谈我对这两种工具的比较：
+
+* evernote，它属于一种分类的管理方式，每一个条目被归类到一个笔记本、一个标签之中，它更多的考虑是对于知识的分类；而vimwiki，是属于一种网状的管理方式，每一个条目都是一个点，每个点都可以相连，它更多的考虑是对于各个知识之间的联系。
+* 使用evernote进行记录时，文本编排是比较麻烦的，有时候我需要用鼠标进行加粗、列表等操作，但它支持上传附件和图片。而vimwiki是基于vim的，它可以使用vim的操作方式，同时还支持wiki语法，书写非常快捷。
+* evernote的强项是资料收集，任何网络上看到的有价值的内容可以方便的被摘录；vimwiki的强项是知识总结与整理，它要求每个条目的内容是丰富而充实的，这就有必要不断地对它进行改进。
+* 使用evernote依赖于他们的服务；vimwiki则是完全属于你自己的。
+
+这是我的个人wiki中，对于vimwiki相关内容的整理、心得和参考链接： "Vimwiki - 贤民.wiki":http://chenxianmin.com/wiki/vimwiki.html ，你可以看到，它是支持生成网页的，然后经过css美化，上传到互联网，一个充满个性的个人站点就轻松的建成了。
+
+h2. 为什么要进行知识管理？
+
+一，每当我用google进行搜索，解决问题的时候，当时我很兴奋，这个问题被我解决了；当我第二次遇到这个问题，我已经忘了解决方法了，又重新上google一个个条目看过去；当这样的情况重复三次、四次，我就觉得效率太低了，我太依赖搜索了。通过搜索，我能够找到解决问题的方法或者是相关内容的资料，但是我能否掌握这是个未知数，况且搜索得到的方法和资料是多种多样的，能否将它们“取其精华，去其糟粕”这也需要一个过程。
+二，看过一些书和资料，遗憾的是很快就把其中的内容给忘了，时间长了，甚至连在哪本书出现都不记得了。
+三，在信息时代，每天能够收到大量的信息，google reader上的，微博上的，社交网站、门户网站上的等等。
+
+因此我想我有必要使用一些辅助工具或者是方法，有效的处理信息，对个人知识进行管理。
+
+h2. 为什么选择vimwiki？
+
+网络上搜一下，还是有不少编写个人wiki的软件的，我为什么要选择vimwiki呢？
+* 它是基于vim编辑器的，无需下载额外的软件，直接使用vim进行编写。
+* 可以同时写日记，写博客，也可用于GTD（虽然我并不使用这个功能）。
+* 每一个条目都是单独的文件，占用内存小，方便转移，方便备份。
+* 可以生成HTML网页，方便在网络上发布。
+
+h2. 小结
+
+编写个人wiki是一个漫长而持续的过程，它在我看来是一种先进的记录方式，读书笔记、读书感悟、所思所想、定理公式、技巧心得等等通通可以记录在内，对于相同的内容可以避免重复，对于相关的内容可以巧妙的相连,随时可以增添或者修改。它与写博客是两种不同的方式。
+我现在主要使用evernote剪辑互联网我需要的信息；对于一些有价值的网站我使用Google Bookmark来存储；有时候一篇文章太长了，需要慢慢消化，这时我用Readitlater标记稍后再读；对于知识的总结归纳，还有分享，我则使用写博客和写wiki这两种方式。依旧在不断的摸索中……
+
+fn1. 博客作者，主要介绍优秀的免费软件。
+
+fn2. Personal knowledge management - "Wikipedia, the free encyclopedia":http://en.wikipedia.org/wiki/Personal_knowledge_management
