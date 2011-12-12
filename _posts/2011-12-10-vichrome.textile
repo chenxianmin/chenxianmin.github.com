@@ -41,7 +41,7 @@ h2. vichrome的特色
 
 h2. vichrome使用进阶
 
-查看 "我的wiki":wiki/vichrome.html
+查看 "我的wiki":../../wiki/vichrome.html
 
 h2. 最后
 
