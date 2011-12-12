@@ -1,3 +1,4 @@
+[[2011-12-10-vichrome]]
 [[2011-12-05-vimwiki]]
 [[2011-11-30-start-blog]]
 [[2011-11-29-hello-jekyll]]

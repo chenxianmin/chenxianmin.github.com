@@ -1,0 +1,56 @@
+---
+layout: post
+title: "又一个chrome上类似vi操作方式的插件——vichrome"
+date: 2011-12-10 20:00:00 +0800
+categories:
+ - vim
+ - chrome
+ - plugin
+---
+
+一直以来，chrome都是我的主要浏览网页的工具。在使用vichrome之前，我用过另外两个chrome上类似vi操作方式的插件vimium[1]和vrome[2]，但都不尽如人意。一次无意间在chrome商店搜索"vim"，我发现了vichrome，这让我异常兴奋，因为它比那两个更好用。
+
+h2. vichrome有什么用？
+
+它是一个提升浏览效率的插件。
+在操纵电脑上，使用键盘点击，要比鼠标移动的效率要高的多。虽然在两个月前，我的鼠标坏了，一直都没有购买，但这并没有给我的使用造成多大的影响，因为我的大部分操作都是用键盘完成的。
+那么它的便捷体现在什么地方呢？比如，我按 @gg@ 可以回到页首，按 @G@ 可以回到页尾，按 @yy@ 可以复制网页链接，按 @u@ 可以重新打开关闭的页面，等等。可以把它理解为快捷键的一种延伸。
+
+h2. vichrome安装
+
+打开chrome，点击安装 "vichrome":https://chrome.google.com/webstore/detail/gghkfhpblkcmlkmpcpgaajbbiikbhpdi ,即可。
+
+h2. vichrome简易教程
+
+使用chrome打开一个页面，确定不在输入状态，按 @:@ ,这时候会在左下方出现一个输入框，这是命令模式，vichrome所有操作的核心。我们不妨继续输入 @BarrelRoll@ （按 @TAB@ 可自动补全），再按回车执行命令.你发现了什么？整个页面旋转了一圈！这个命令实际并没有什么实用价值，但我想你已经会使用vichrome的命令模式了。
+
+接着，按 @f@ 键，页面所有的链接左上方出现了一个黄色的小方框，里面有两个字母，再输入你需要点击的链接 *对应的字母* ，你就可以眺转到目标页面了。
+
+那么继续，输入 @:opt@ 回车，你会眺转到vichrome的选项页面，在这里你可以自定义你的vichrome。选择 @Key Mapping@ ，上方的输入框我们可以自定义按键。我们先看下方，这里可以看到它的默认按键命令，你目前所有可以使用的按键命令都在这里列出了。（注：在选项页面，vichrome的按键命令是无效的。） 回到网页，试验其他的命令吧。
+
+需要详细的帮助内容？按 @:help@ 回车。
+
+h2. vichrome的特色
+
+* 所有的操作都是一个 *命令* 。
+* 类似vi的操作模式。
+* 拥有更强的自定义性。
+* 可以针对个别网址禁用vichrome。[3]
+* 与 @Readability Redux@ 扩展结合使用。[4]
+* pagecmd让不同的页面使用不同映射。
+
+h2. vichrome使用进阶
+
+查看 "我的wiki":wiki/vichrome.html
+
+h2. 最后
+
+感谢 k2nr 在chrome上提供了一个这么强大的插件。使用一个多月以来，作者更新了多次，每次更新都会给我带来新的的惊喜。希望这款插件能够得到更多的关注。
+
+fn1. 应该是chrome上最早类似vi操作方式的插件，用户群较多， "安装地址":https://chrome.google.com/webstore/detail/dbepggeogbaibhgnhhndojpepiihcmeb/details
+
+fn2. 作者是国人，有它独有的功能，但bug较多，长时间未更新， "安装地址":https://chrome.google.com/webstore/detail/godjoomfiimiddapohpmfklhgmbfffjj/details
+
+fn3. 在选项中设置。
+
+fn4. 一个提升阅读体验的扩展，需要 "安装":https://chrome.google.com/webstore/detail/jggheggpdocamneaacmfoipeehedigia

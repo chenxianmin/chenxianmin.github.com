@@ -1,0 +1,133 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<head>
+    <title>vichrome - 贤民.wiki</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="Stylesheet" type="text/css" href="css/style.css" />
+    <!-- ico -->
+    <link type="image/x-icon" rel="icon" href="../favicon.ico"/>
+    <link type="image/x-icon" rel="shortcut icon" href="../favicon.ico"/>
+</head>
+<body>
+    <header>
+    <ul>
+        <li><a href="index.html"> 首页</a></li>
+        <li><a href="../index.html"> blog</a></li>
+    </ul>
+    </header>
+    <div id="outerwrapper">
+        <div class="content">
+            <h1>vichrome</h1>
+            
+<div class="toc">
+<ul>
+<li><a href="#toc_0.1">1 简介</a>
+<li><a href="#toc_0.2">2 vichrome使用技巧</a>
+<ul>
+<li><a href="#toc_0.2.1">2.1 复制相关</a>
+<li><a href="#toc_0.2.2">2.2 快捷打开常用网址</a>
+<li><a href="#toc_0.2.3">2.3 与 Readability Redux 扩展结合使用</a>
+<li><a href="#toc_0.2.4">2.4 pagecmd映射使用</a>
+</ul>
+<li><a href="#toc_0.3">3 我的vichrome配置</a>
+</ul>
+</ul>
+</div>
+<h2 id="toc_0.1">1 简介</h2>
+<p>
+vichrome是一款chrome上类似vi操作方式的插件，<a href="https://chrome.google.com/webstore/detail/gghkfhpblkcmlkmpcpgaajbbiikbhpdi">点击安装</a>,github地址：<a href="https://github.com/k2nr/ViChrome">https://github.com/k2nr/ViChrome</a>
+</p>
+
+<h2 id="toc_0.2">2 vichrome使用技巧</h2>
+
+<h3 id="toc_0.2.1">2.1 复制相关</h3>
+
+<p>
+默认 <code>yy</code> 可以复制当前网址，但 <strong>复制标题</strong> 没有默认的映射，我们需要在 <code>Key Mapping</code> 中自己自定义，加入 <code>nmap Y :Copy %title</code> ，更新映射。然后就可以使用 <code>Y</code> 键复制页面的标题了。
+</p>
+
+<h3 id="toc_0.2.2">2.2 快捷打开常用网址</h3>
+
+<p>
+在 <code>Key Mapping</code> 加入：
+</p>
+<pre>
+nmap ,db :OpenNewTab http://www.douban.com
+nmap ,tw :OpenNewTab http://www.twitter.com
+nmap ,gr :OpenNewTab http://www.google.com/reader
+nmap ,m :OpenNewTab https://mail.google.com/mail/#inbox
+</pre>
+<p>
+这样，按 <code>,m</code> 就可以快速打开gmail了。
+</p>
+
+<h3 id="toc_0.2.3">2.3 与 Readability Redux 扩展结合使用</h3>
+
+<p>
+Readability是一个提升阅读体验的扩展，首先安装 <a href="https://chrome.google.com/webstore/detail/jggheggpdocamneaacmfoipeehedigia">Readability Redux</a>，然后就可以使用vichrome的命令 <code>:Readability</code> 调用它了。不妨在KeyMapping中加入映射： <code>nmap w :Readability</code>
+</p>
+
+<h3 id="toc_0.2.4">2.4 pagecmd映射使用</h3>
+
+<p>
+pagecmd能给网页提供特定的映射，比如，在google+中，j 和 k 键分别代表了“上一条目”和“下一条目”的快捷键，要比vichrome中的映射好用。我们需要禁用vichrome中的 j 和 k 这两个映射，但其他的映射依然可以使用。这时候，我们可以如下设置：
+</p>
+
+<pre>
+pagecmd http*://plus.google.com/* nmap j &lt;NOP&gt;
+pagecmd http*://plus.google.com/* nmap k &lt;NOP&gt;
+</pre>
+
+<p>
+pagecmd的优先等级是高于"ignored URLs"的，也就是说我们可以设置一个所有网页都通用的映射（包括忽略的网址）：
+pagecmd * nmap &lt;C-h&gt; :TobFocusPrev
+</p>
+
+<h2 id="toc_0.3">3 我的vichrome配置</h2>
+<pre>
+nmap J :PageHalfDown
+nmap K :PageHalfUp
+nmap h :TabFocusPrev
+nmap l :TabFocusNext
+
+nmap Y :Copy %title
+
+nmap w :Readability
+
+pagecmd * nmap &lt;C-h&gt; :TabFocusPrev
+pagecmd * nmap &lt;C-j&gt; :PageHalfDown
+pagecmd * nmap &lt;C-k&gt; :PageHalfUp
+pagecmd * nmap &lt;C-f&gt; :GoFMode
+pagecmd http*://plus.google.com/* nmap j &lt;NOP&gt;
+pagecmd http*://plus.google.com/* nmap k &lt;NOP&gt;
+
+
+# aliases
+alias ext OpenNewTab chrome://extensions/
+alias option OpenNewTab chrome://settings/browser
+alias his OpenNewTab chrome://history
+
+# mappings for opening your favorite web page
+nmap ,db :OpenNewTab http://www.douban.com
+nmap ,tw :OpenNewTab http://www.twitter.com
+nmap ,gr :OpenNewTab http://www.google.com/reader
+nmap ,m :OpenNewTab https://mail.google.com/mail/#inbox
+</pre>
+
+        </div>
+    </div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27420885-1']);
+  _gaq.push(['_setDomainName', 'chenxianmin.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

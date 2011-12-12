@@ -73,7 +73,6 @@ blockquote{
 code{
     font-style:normal;
     padding:2px 3px; background:#668 none;
-    font-family:"Courier New";
     -moz-border-radius:4px; -khtml-border-radius:4px; -webkit-border-radius:4px; border-radius:4px;
 }
 
