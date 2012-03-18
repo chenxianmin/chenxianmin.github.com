@@ -36,10 +36,10 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 1em; margin-bottom: 0.5em;
     border-bottom:0px none; text-shadow:2px 2px 4px #333;
 }
-h1 {font-size: 2.0em; font-weight:normal; border-bottom:1px solid white;}
-h2 {font-size: 1.6em; font-weight:normal; border-bottom:1px dashed white;}
-h3 {font-size: 1.3em; font-weight:normal;}
-h4 {font-size: 1.2em; font-weight:normal;}
+h1 {font-size: 2.0em; color: #f37; font-weight:normal; border-bottom:1px solid white;}
+h2 {font-size: 1.6em; color: #fd5; font-weight:normal; border-bottom:1px dashed white;}
+h3 {font-size: 1.3em; color: #df5; font-weight:normal;}
+h4 {font-size: 1.2em; color: #6d9; font-weight:normal;}
 h5 {font-size: 1.1em; font-weight:normal;}
 h6 {font-size: 1.0em; font-weight:normal;}
 
@@ -90,8 +90,19 @@ table{
 hr {border: none; border-top: 1px solid #ccc; width: 100%;}
 del {text-decoration: line-through; color: #777777;}
 
-a{color:#88a; text-decoration:none;}
-a:hover{color: black; text-decoration:underline}
+a {
+    color: #0df;
+    text-decoration: none;
+    padding-bottom: 1px;
+}
+a:hover {
+    color: #5ef;
+    padding-bottom: 0;
+    border-bottom: 1px solid #468;
+}
+a:visited {
+    color: #6ac;
+}
 
 div.toc{border:1px dashed #ccc; background:#335; float:right; padding:3px; position:fixed; top:4em; right:1em; z-index:1;
     -moz-border-radius:5px; -khtml-border-radius:5px; -webkit-border-radius:5px; border-radius:5px;
